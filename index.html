@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Interativa: Tom e Semitom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">♪</div>
+                    <h1>Tom & Semitom</h1>
+                </div>
+                <p class="header-subtitle">Aula Interativa de Teoria Musical</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Entenda os Blocos Fundamentais da Música</h2>
+                    <p>Explore os conceitos de <span class="highlight-tom">tom</span> e <span class="highlight-semitom">semitom</span>, as menores unidades de medida de altura na música ocidental.</p>
+                </div>
+
+                <!-- Interactive Piano -->
+                <div class="piano-section">
+                    <h3>Teclado Interativo</h3>
+                    <div class="piano-container">
+                        <div class="piano-keys" id="pianoKeys"></div>
+                    </div>
+                    <p class="piano-hint">Clique nas teclas para ouvir as notas</p>
+                </div>
+            </section>
+
+            <!-- Semitom Section -->
+            <section class="section">
+                <div class="section-grid">
+                    <div class="section-content">
+                        <div class="section-header">
+                            <div class="section-icon semitom-icon">½</div>
+                            <h2>Semitom</h2>
+                        </div>
+                        <p class="section-description">
+                            O <span class="badge badge-semitom">semitom</span> (ou meio tom) é a <strong>menor distância possível</strong> entre duas notas na escala cromática.
+                        </p>
+
+                        <div class="info-boxes">
+                            <div class="info-box">
+                                <h4>Exemplos de Semitons:</h4>
+                                <ul>
+                                    <li><strong>Dó para Dó#:</strong> Semitom cromático (mesmo nome)</li>
+                                    <li><strong>Mi para Fá:</strong> Semitom diatônico (nomes diferentes)</li>
+                                    <li><strong>Si para Dó:</strong> Semitom diatônico (nomes diferentes)</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box">
+                                <h4>No Teclado:</h4>
+                                <p>Um semitom é o movimento de uma tecla para a tecla imediatamente adjacente, seja ela branca ou preta.</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-semitom" id="playSemitom">
+                            <span class="btn-icon">🔊</span> Ouvir Exemplo: Dó → Dó#
+                        </button>
+                    </div>
+
+                    <div class="section-visual">
+                        <div class="visual-box">
+                            <h3>Visualização</h3>
+                            <div class="note-comparison">
+                                <div class="note note-white">C</div>
+                                <div class="arrow">→</div>
+                                <div class="note note-black">C#</div>
+                            </div>
+                            <p class="distance-label">Distância: <strong>1 semitom</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tom Section -->
+            <section class="section">
+                <div class="section-grid reverse">
+                    <div class="section-visual">
+                        <div class="visual-box">
+                            <h3>Visualização</h3>
+                            <div class="note-comparison">
+                                <div class="note note-white">C</div>
+                                <div class="arrow">→</div>
+                                <div class="note note-white">D</div>
+                            </div>
+                            <p class="distance-label">Distância: <strong>1 tom (2 semitons)</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="section-content">
+                        <div class="section-header">
+                            <div class="section-icon tom-icon">T</div>
+                            <h2>Tom (Tom Inteiro)</h2>
+                        </div>
+                        <p class="section-description">
+                            O <span class="badge badge-tom">tom</span> (ou tom inteiro) é a distância equivalente a <strong>dois semitons</strong>.
+                        </p>
+
+                        <div class="info-boxes">
+                            <div class="info-box">
+                                <h4>Exemplos de Tons:</h4>
+                                <ul>
+                                    <li><strong>Dó para Ré:</strong> Tom (C → C# → D)</li>
+                                    <li><strong>Fá# para Sol#:</strong> Tom (F# → G → G#)</li>
+                                    <li><strong>Lá para Si:</strong> Tom (A → A# → B)</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-box">
+                                <h4>Estrutura:</h4>
+                                <p style="font-family: monospace; background: rgba(0,0,0,0.05); padding: 0.5rem; border-radius: 0.5rem;">
+                                    Semitom + Semitom = Tom
+                                </p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-tom" id="playTom">
+                            <span class="btn-icon">🔊</span> Ouvir Exemplo: Dó → Ré
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Major Scale Section -->
+            <section class="section major-scale-section">
+                <div class="major-scale-card">
+                    <div class="major-scale-header">
+                        <h2>A Escala Maior: T-T-S-T-T-T-S</h2>
+                        <p>A importância do tom e do semitom se manifesta claramente na construção das escalas. A <strong>Escala Maior</strong> é o modelo fundamental da música ocidental.</p>
+                    </div>
+
+                    <div class="scale-formula">
+                        <h3>Fórmula da Escala Maior:</h3>
+                        <div class="formula-boxes">
+                            <div class="formula-box tom-box">T</div>
+                            <div class="formula-box tom-box">T</div>
+                            <div class="formula-box semitom-box">S</div>
+                            <div class="formula-box tom-box">T</div>
+                            <div class="formula-box tom-box">T</div>
+                            <div class="formula-box tom-box">T</div>
+                            <div class="formula-box semitom-box">S</div>
+                        </div>
+                        <p>Esta sequência é a "receita" para construir qualquer escala maior, começando de qualquer nota.</p>
+                    </div>
+
+                    <div class="scale-grid">
+                        <div class="scale-table">
+                            <h3>Escala de Dó Maior</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nota</th>
+                                        <th>Intervalo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dó (C)</td>
+                                        <td><span class="badge badge-tom">Tom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ré (D)</td>
+                                        <td><span class="badge badge-tom">Tom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mi (E)</td>
+                                        <td><span class="badge badge-semitom">Semitom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fá (F)</td>
+                                        <td><span class="badge badge-tom">Tom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sol (G)</td>
+                                        <td><span class="badge badge-tom">Tom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lá (A)</td>
+                                        <td><span class="badge badge-tom">Tom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Si (B)</td>
+                                        <td><span class="badge badge-semitom">Semitom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dó (C)</td>
+                                        <td>—</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="scale-characteristics">
+                            <h3>Características</h3>
+                            <ul>
+                                <li><strong>8 notas</strong> no total (incluindo a oitava)</li>
+                                <li><strong>5 tons</strong> e <strong>2 semitons</strong></li>
+                                <li>Semitons ocorrem entre o <strong>3º e 4º</strong> graus (Mi-Fá) e entre o <strong>7º e 8º</strong> graus (Si-Dó)</li>
+                                <li>Padrão universal para todas as escalas maiores</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-scale" id="playScale">
+                        <span class="btn-icon">🎵</span> Ouvir Escala de Dó Maior Completa
+                    </button>
+                </div>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="section summary-section">
+                <h2>Resumo</h2>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-icon semitom-icon">½</div>
+                        <h3>Semitom</h3>
+                        <p>A menor distância possível entre duas notas na escala cromática.</p>
+                        <p class="summary-example"><strong>Exemplo:</strong> Dó para Dó#</p>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="summary-icon tom-icon">T</div>
+                        <h3>Tom</h3>
+                        <p>Distância equivalente a dois semitons.</p>
+                        <p class="summary-example"><strong>Exemplo:</strong> Dó para Ré</p>
+                    </div>
+
+                    <div class="summary-card">
+                        <div class="summary-icon scale-icon">♪</div>
+                        <h3>Escala Maior</h3>
+                        <p>Construída com a fórmula: T-T-S-T-T-T-S</p>
+                        <p class="summary-example"><strong>Base:</strong> Toda a música ocidental</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="section conclusion-section">
+                <div class="conclusion-card">
+                    <h2>Dominar Tom e Semitom é o Primeiro Passo</h2>
+                    <p>Estes conceitos fundamentais são a base para entender harmonia, melodia, intervalos, escalas e acordes. Continue explorando e praticando!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Teoria Musical. Todos os direitos reservados. Desenvolvido por <a href="https://wa.me/5521989978029" target="_blank" class="underline">Bru Cardoso Coder.</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
