@@ -565,9 +565,10 @@ th {
 }
 
 td {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     border-bottom: 1px solid var(--color-border);
     font-size: var(--font-size-sm);
+    vertical-align: top;
 }
 
 tr:last-child td {
@@ -773,6 +774,7 @@ tr:last-child td {
     border-radius: 9999px;
     font-size: var(--font-size-xs);
     font-weight: 600;
+    margin-top: 50px;
 }
 
 .badge-semitom {
